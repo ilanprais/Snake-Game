@@ -17,3 +17,54 @@ If the snake touches itself the plater loses.
   - Block(s)
 - Apples
 - Score
+
+### GameObject Interface
+- display(grid)
+- doOneFrame()
+
+### GameGrid Interface implement Displayable
+- members:
+  - height
+  - width
+  - pixels (array of rgb color values)
+  - list of GameObjects
+- functions:
+  - doOneFrame()
+  - display()
+  - setPixel(x, y)
+
+### Displayable Interface
+- display()
+
+### Game Interface
+- create()
+- run()
+- close()
+
+### SnakeGame implemets Game
+- in interface
+
+### Block implements GameObject
+- members:
+   - x
+   - y
+   - color
+- functions:
+  - setLocation(x, y)
+  - in interface
+
+### Snake implemets GameObjects
+- members:
+  - list of Blocks (index 0 head index size-1 tail)
+  - color
+  - head direction
+  - turn location (the location where the head direction was changed, starts at null)
+- functions:
+  - in interface
+  
+  ### SnakeGameGrid implements GameGrid
+  - in interface
+
+
+
+
