@@ -53,7 +53,7 @@ If the snake touches itself the plater loses.
   - setLocation(x, y)
   - in interface
 
-### Snake implemets GameObjects
+### Snake implemets GameObject
 - members:
   - list of Blocks (index 0 head index size-1 tail)
   - color
