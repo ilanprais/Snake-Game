@@ -19,7 +19,6 @@ If the snake touches itself the plater loses.
 - Score
 
 ### GameObject Interface
-- display(grid)
 - doOneFrame()
 
 ### GameGrid Interface implement Displayable
@@ -30,8 +29,8 @@ If the snake touches itself the plater loses.
   - list of GameObjects
 - functions:
   - doOneFrame()
-  - display()
-  - setPixel(x, y)
+  - display(Gui window)
+  - add(GameObject)
 
 ### Displayable Interface
 - display()
