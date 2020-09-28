@@ -43,7 +43,7 @@ If the snake touches itself the plater loses.
 ### SnakeGame implemets Game
 - in interface
 
-### Block implements GameObject
+### Block
 - members:
    - x
    - y
@@ -61,8 +61,15 @@ If the snake touches itself the plater loses.
 - functions:
   - in interface
   
-  ### SnakeGameGrid implements GameGrid
+### Apple implemets Extends Block implements GameObject
+- x
+- y
+- color
+- functions:
   - in interface
+  
+### SnakeGameGrid implements GameGrid
+- in interface
 
 
 
