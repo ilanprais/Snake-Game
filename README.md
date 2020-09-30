@@ -1,6 +1,7 @@
 # Simple Snake Game
 ## overview
 In this project, I wrote a simple snake game in python, using the *pyGame* module.
+
 The snake game runs on a 500 by 500 window, and includes feautues such as:
 - Apple eating
 - Snake size increasing when eating apples
@@ -9,4 +10,5 @@ The snake game runs on a 500 by 500 window, and includes feautues such as:
 
 ## Game Flow
 the game is played using the up, down, right, and left arrow keys.
-simply contry the snake's direction using these keys and play along
+
+simply control the snake's direction using these keys and play along
