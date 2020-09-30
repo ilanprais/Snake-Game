@@ -1,6 +1,8 @@
 from game import SnakeGame
 
-game = SnakeGame.SnakeGame(20)
+GRID_SIZE = 20
+
+game = SnakeGame.SnakeGame(GRID_SIZE)
 game.initialize()
 game.run()
 
