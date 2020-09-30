@@ -1,5 +1,5 @@
 # Simple Snake Game
-## overview
+## Overview
 In this project, I wrote a simple snake game in python, using the *pyGame* module.
 
 The snake game runs on a 500 by 500 window, and includes feautues such as:
