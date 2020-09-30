@@ -8,4 +8,5 @@ The snake game runs on a 500 by 500 window, and includes feautues such as:
 - Game ending when snake runs into itself
 
 ## Game Flow
-![Screenshot](screensht.png)
+the game is played using the up, down, right, and left arrow keys.
+simply contry the snake's direction using these keys and play along
