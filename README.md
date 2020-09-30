@@ -8,4 +8,4 @@ The snake game runs on a 500 by 500 window, and includes feautues such as:
 - Game ending when snake runs into itself
 
 ## Game Flow
-![Screenshot](gameflw.png)
+![Screenshot](screensht.png)
