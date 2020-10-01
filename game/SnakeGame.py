@@ -23,15 +23,18 @@ class SnakeGame(Game.Game):
         self.__snake = Snake.Snake(snakeBlocks, width)
         self.__apple = Apple.Apple(int(random.random() * width / blockSize) * blockSize,
                                    int(random.random()*width/blockSize) * blockSize, blockSize, width)
-        self.__score = Score.Score(width - blockSize*1.5, 0, "black")
+        self.__score = Score.Score(width - blockSize*1.2, 0, "black", "")
+        self.__highScore = Score.Score(0, 0, "black", "High: ")
 
     def initialize(self):
         pygame.display.set_caption("Snake")
         icon = pygame.image.load("resources/logo.png")
         pygame.display.set_icon(icon)
+        self.__highScore.set(self.readHighScore())
         self.__grid.add(self.__snake)
         self.__grid.add(self.__apple)
         self.__grid.add(self.__score)
+        self.__grid.add(self.__highScore)
 
     def run(self):
 
@@ -44,10 +47,10 @@ class SnakeGame(Game.Game):
             self.__grid.doOneFrame()
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
+                    self.writeHighScore(self.__score.get())
                     running = False
                 self.getKeyPress(event)
-
-            self.__score.set(self.__apple.getTimesEaten())
+            self.updateScore()
             self.__grid.display(self.__wn)
             pygame.display.update()
             pygame.time.wait(300)
@@ -63,3 +66,26 @@ class SnakeGame(Game.Game):
                 self.__snake.turnDown()
             elif event.key == pygame.K_UP:
                 self.__snake.turnUp()
+
+    def updateScore(self):
+        self.__score.set(self.__apple.getTimesEaten())
+        if self.__score.get() > self.__highScore.get():
+            self.__highScore.set(self.__score.get())
+
+    def readHighScore(self):
+        high = open("data/high.txt", "r")
+        highScoreText = high.readline()
+        print(highScoreText)
+        if highScoreText != "":
+            return int(highScoreText)
+        else:
+            return 0
+
+    def writeHighScore(self, score):
+        high = open("data/high.txt", "w")
+        highScore = self.__highScore.get()
+        if score > highScore:
+            high.write(str(score))
+        else:
+            high.write(str(highScore))
+        high.close()
