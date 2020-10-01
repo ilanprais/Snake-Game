@@ -23,7 +23,7 @@ class SnakeGame(Game.Game):
         self.__snake = Snake.Snake(snakeBlocks, width)
         self.__apple = Apple.Apple(int(random.random() * width / blockSize) * blockSize,
                                    int(random.random()*width/blockSize) * blockSize, blockSize, width)
-        self.__score = Score.Score(width - blockSize, 0, "black")
+        self.__score = Score.Score(width - blockSize*1.5, 0, "black")
 
     def initialize(self):
         pygame.display.set_caption("Snake")
