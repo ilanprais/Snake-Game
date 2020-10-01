@@ -7,6 +7,7 @@ The snake game runs on a 500 by 500 window, and includes feautues such as:
 - Snake size increasing when eating apples
 - Score counter
 - Game ending when snake runs into itself
+- High Score tracking between games
 
 ## Game Flow
 the game is played using the up, down, right, and left arrow keys.
@@ -27,5 +28,5 @@ The basic class design is as follows:
 - **GameObject**
   An abstract class which is implemented by any game "object", an object in the game which has dynamic characteristics and is diplayed on the screen (such as *Snake* and *Apple*).
   
-- **Snake, Apple, Counter, Block**
+- **Snake, Apple, Score, Block**
   GameObjects, each object has a class implementing *GameObject*, with *Apple* inheriting from *Block*, and *Snake* containing a list of *Blocks*
