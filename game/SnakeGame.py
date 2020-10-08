@@ -22,7 +22,7 @@ class SnakeGame(Game.Game):
         snakeBlocks = [block1, block2]
         self.__snake = Snake.Snake(snakeBlocks, width)
         self.__apple = Apple.Apple(int(random.random() * width / blockSize) * blockSize,
-                                   int(random.random()*width/blockSize) * blockSize, blockSize, width)
+                                   int(random.random() * width/blockSize) * blockSize, blockSize, width)
         self.__score = Score.Score(width - blockSize*1.2, 0, "black", "")
         self.__highScore = Score.Score(0, 0, "black", "High: ")
 
@@ -84,8 +84,5 @@ class SnakeGame(Game.Game):
     def writeHighScore(self, score):
         high = open("data/high.txt", "w")
         highScore = self.__highScore.get()
-        if score > highScore:
-            high.write(str(score))
-        else:
-            high.write(str(highScore))
+        high.write(str(highScore))
         high.close()
