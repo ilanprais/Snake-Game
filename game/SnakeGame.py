@@ -50,6 +50,9 @@ class SnakeGame(Game.Game):
                     self.writeHighScore(self.__score.get())
                     running = False
                 self.getKeyPress(event)
+            if not self.__snake.isAlive():
+                self.writeHighScore(self.__score.get())
+                running = False
             self.updateScore()
             self.__grid.display(self.__wn)
             pygame.display.update()
