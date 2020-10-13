@@ -78,7 +78,6 @@ class SnakeGame(Game.Game):
     def readHighScore(self):
         high = open("data/high.txt", "r")
         highScoreText = high.readline()
-        print(highScoreText)
         if highScoreText != "":
             return int(highScoreText)
         else:
